@@ -1,0 +1,8 @@
+*.zip
+originals/
+enhanced-masters/
+quality-check/
+/work/
+/outputs/
+.DS_Store
+Thumbs.db
