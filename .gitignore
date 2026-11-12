@@ -8,5 +8,6 @@ quality-check/
 Thumbs.db
 /dist/
 /node_modules/
+/.vercel/
 .env
 .env.*

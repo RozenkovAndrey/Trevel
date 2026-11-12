@@ -1,0 +1,6 @@
+work/
+outputs/
+dist/
+.env
+.env.*
+*.zip
