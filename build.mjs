@@ -8,7 +8,8 @@ const sizes = Object.fromEntries(manifest.split(/\r?\n/).flatMap(line => {
   const dims = [...line.matchAll(/(\d+)×(\d+)/g)].at(-1);
   return path && dims ? [[path, dims.slice(1)]] : [];
 }));
-const domain = (process.env.SITE_DOMAIN || '[DOMAIN]').replace(/\/$/, '');
+const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+const domain = (process.env.SITE_DOMAIN || (productionHost ? 'https://' + productionHost : '[DOMAIN]')).replace(/\/$/, '');
 const pages = { home: '', east: 'east/', west: 'west/', privacy: 'privacy.html', credits: 'photo-credits.html' };
 const url = (page, en) => (en ? 'en/' : '') + pages[page];
 const heroDesktop = 'hero/hero-lycian-coast-desktop.webp';
@@ -144,5 +145,5 @@ for (const en of [false,true]) for (const page of Object.keys(pages)) {
   output(path.endsWith('.html') ? path : path+'index.html',render(page,en));
 }
 for (const asset of ['images','site.css','site.js','config.js','favicon.svg','social-card.png']) cpSync(asset,'dist/'+asset,{recursive:true});
-output('robots.txt', domain==='[DOMAIN]' ? 'User-agent: *\nDisallow: /\n' : 'User-agent: *\nAllow: /\nSitemap: '+domain+'/sitemap.xml\n');
+output('robots.txt', !process.env.SITE_DOMAIN ? 'User-agent: *\nDisallow: /\n' : 'User-agent: *\nAllow: /\nSitemap: '+domain+'/sitemap.xml\n');
 output('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+[false,true].flatMap(en=>Object.keys(pages).map(page=>'<url><loc>'+esc(domain+'/'+url(page,en))+'</loc></url>')).join('')+'</urlset>');
