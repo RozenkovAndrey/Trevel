@@ -84,7 +84,7 @@ function render(page, en) {
       '<label>'+t('Имя','Name')+'<input name="name" autocomplete="name" required maxlength="100"></label>'+
       '<label>'+t('Контакт: email, телефон или мессенджер','Contact: email, phone or messaging handle')+'<input name="contact" required maxlength="160"></label>'+
       '<label>'+t('Маршрут','Route')+'<select name="route" required><option value="">'+t('Выберите маршрут','Choose a route')+'</option>'+
-      ['EAST','WEST','FULL RESET','Not sure'].map(v=>'<option'+(v===page.toUpperCase()?' selected':'')+' value="'+v+'">'+(v==='Not sure'?t('Пока не знаю','Not sure'):v)+'</option>').join('')+'</select></label>'+
+      ['EAST','WEST','FULL RESET','Not sure'].map(v=>'<option value="'+v+'">'+(v==='Not sure'?t('Пока не знаю','Not sure'):v)+'</option>').join('')+'</select></label>'+
       '<label>'+t('Размещение (необязательно)','Accommodation (optional)')+'<select name="stay"><option value="">'+t('Пока не знаю','Not sure')+'</option><option>CAMP</option><option>COMFORT</option></select></label>'+
       '<label>'+t('Комментарий (необязательно)','Comment (optional)')+'<textarea name="message" maxlength="1000" rows="3"></textarea></label>'+
       '<div hidden><label>Bot check<input type="checkbox" name="botcheck" tabindex="-1"></label></div>'+
