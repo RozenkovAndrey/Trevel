@@ -17,9 +17,18 @@ function menuState(open) {
   menu.setAttribute('aria-expanded', String(narrow.matches && open));
   nav.hidden = narrow.matches && !open;
 }
-menuState(false);
-narrow.addEventListener('change', () => menuState(false));
+menuState(true);
+narrow.addEventListener('change', () => menuState(true));
 menu.addEventListener('click', () => menuState(nav.hidden));
+
+if (document.querySelector('.hero')) {
+  const header = nav.closest('header');
+  function updateHeaderHeight() {
+    document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
+  }
+  updateHeaderHeight();
+  new ResizeObserver(updateHeaderHeight).observe(header);
+}
 nav.addEventListener('click', event => {
   if (event.target.closest('a') && narrow.matches) {
     const link = event.target.closest('a');
