@@ -6,3 +6,7 @@ quality-check/
 /outputs/
 .DS_Store
 Thumbs.db
+/dist/
+/node_modules/
+.env
+.env.*

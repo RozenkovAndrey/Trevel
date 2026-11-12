@@ -1,0 +1,48 @@
+export const routes = {
+  east: {
+    name: ['Огонь и горы', 'Fire and mountains'],
+    intro: ['Горный каньон, античные руины и огни Химеры над побережьем Чиралы.', 'Follow the coast from a mountain canyon and ancient ruins to the flames above Çıralı.'],
+    cover: 'east/east-cirali-coast-overlook-card.webp',
+    alt: ['Берег Чиралы под горным склоном', 'The shoreline below the hills of Çıralı'],
+    stops: ['Antalya', 'Göynük Canyon', 'Phaselis', 'Çıralı', 'Olympos', 'Yanartaş', 'Adrasan', 'Gelidonya', 'Antalya'],
+    days: ['Antalya', 'Göynük Canyon', 'Phaselis · Çıralı', 'Olympos · Yanartaş', 'Adrasan', 'Gelidonya', 'Antalya'],
+    photos: [
+      ['external/east-goynuk-canyon.webp', 'Каньон Гёйнюк', 'Göynük Canyon'],
+      ['external/east-phaselis-aqueduct.webp', 'Акведук Фаселиса', 'Phaselis aqueduct'],
+      ['east/east-cirali-coast-overlook.webp', 'Побережье Чиралы', 'The coast at Çıralı'],
+      ['east/east-olympos-stone-ruins.webp', 'Каменные руины Олимпоса', 'Stone ruins of Olympos'],
+      ['east/east-yanartas-fire.webp', 'Огни Янарташа', 'The flames of Yanartaş'],
+      ['external/east-adrasan-rocky-shore.webp', 'Скалистый берег Адрасана', 'The rocky shore at Adrasan'],
+      ['external/east-gelidonya-lighthouse.webp', 'Маяк Гелидонья', 'Gelidonya Lighthouse'],
+      ['east/east-mountain-beach.webp', 'Пляж у гор', 'A beach below the mountains'],
+    ],
+  },
+  west: {
+    name: ['Море и панорамы', 'Sea and panoramas'],
+    intro: ['Дюны Патары, бухта Кабак и виды на Долину Бабочек и лагуну Олюдениз.', 'Walk from Patara’s dunes to the bay at Kabak, with sweeping views over Butterfly Valley and Ölüdeniz.'],
+    cover: 'west/west-oludeniz-view.webp',
+    alt: ['Изгиб лагуны Олюдениз', 'The curving lagoon at Ölüdeniz'],
+    stops: ['Antalya', 'Patara', 'Kabak', 'Faralya / Butterfly Valley', 'Ölüdeniz', 'Antalya'],
+    days: ['Antalya', 'Patara', 'Patara', 'Kabak', 'Faralya / Butterfly Valley', 'Ölüdeniz', 'Antalya'],
+    photos: [
+      ['west/west-patara-theatre.webp', 'Театр Патары', 'Patara’s ancient theatre'],
+      ['west/west-patara-dunes.webp', 'Дюны Патары', 'The dunes at Patara'],
+      ['west/west-kabak-bay.webp', 'Бухта Кабак', 'Kabak Bay'],
+      ['west/west-butterfly-valley-view.webp', 'Долина Бабочек', 'Butterfly Valley'],
+      ['west/west-oludeniz-view.webp', 'Лагуна Олюдениз', 'Ölüdeniz lagoon'],
+      ['west/west-patara-ruins.webp', 'Руины Патары', 'Patara ruins'],
+      ['external/west-faralya-trail.webp', 'Дорога у Фаральи', 'A road near Faralya'],
+      ['details/details-kabak-trail-marker.webp', 'Указатель на тропе в Кабаке', 'A trail sign near Kabak'],
+    ],
+  },
+};
+export const homePhotos = [
+  ['east/east-mountain-beach.webp', 'Пляж у гор', 'A beach below the mountains'],
+  ['west/west-butterfly-valley-view.webp', 'Долина Бабочек', 'Butterfly Valley'],
+  ['people/people-coastal-lookout-pair.webp', 'Двое на смотровой над морем', 'Two walkers looking out over the sea'],
+  ['east/east-yanartas-fire.webp', 'Огни Янарташа', 'The flames of Yanartaş'],
+  ['west/west-patara-theatre.webp', 'Театр Патары', 'Patara’s ancient theatre'],
+  ['people/people-rainy-trail-group.webp', 'Группа на тропе после дождя', 'A group on the trail in wet weather'],
+  ['west/west-kabak-bay.webp', 'Бухта Кабак', 'Kabak Bay'],
+  ['details/details-sunset-at-sea.webp', 'Закат над морем', 'Sunset over the sea'],
+];
